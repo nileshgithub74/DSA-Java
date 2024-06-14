@@ -33,12 +33,3 @@ public class MylamdaDemo{
 
 
 
-
-
-
-
-
-
-public class MyLamda {
-    
-}

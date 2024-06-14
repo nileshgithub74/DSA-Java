@@ -19,7 +19,10 @@ interface Mylamda{
 // }
 public class MylamdaDemo{
     public static void main(String[] args){
-        Mylamda  m = new Myclass();
+        Mylamda  m = ()->{ System.out.println("hello world!"); };
+
+            
+        
         m.display();
     }
 }

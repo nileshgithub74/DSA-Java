@@ -1,28 +1,28 @@
-package LamdaExpression;
+// package LamdaExpression;
 
 
-@FunctionalInterface
+// @FunctionalInterface
 
 
-interface Mylamda{
+// interface Mylamda{
 
-    public void display();
-}
+//     public void display();
+// }
 
 
-class Myclass implements Mylamda{
-    public void display(){
-        System.out.println("Heyy , this is nilesh");
-    }
+// class Myclass implements Mylamda{
+//     public void display(){
+//         System.out.println("Heyy , this is nilesh");
+//     }
 
    
-}
-public class Mylamda{
-    public static void main(String[] args){
-        MyLamda m = new MyLamda();
-        m.display();
-    }
-}
+// }
+// public class Mylamda{
+//     public static void main(String[] args){
+//         MyLamda m = new MyLamda();
+//         m.display();
+//     }
+// }
 
 
 
@@ -39,6 +39,6 @@ public class Mylamda{
 
 
 
-public class MyLamda {
+// public class MyLamda {
     
-}
+// }

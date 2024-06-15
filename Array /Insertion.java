@@ -21,26 +21,26 @@ public class Insertion {
             System.out.print(arr[i] + " ");
         }
 
-        System.out.println("Enter the element we want to insert: ");
-        int element = sc.nextInt();
-        System.out.println("Enter the index: ");
-        int index = sc.nextInt();
+//         System.out.println("Enter the element we want to insert: ");
+//         int element = sc.nextInt();
+//         System.out.println("Enter the index: ");
+//         int index = sc.nextInt();
 
-        if (index < size  || index>0) {
-            for (int i = size ; i > index; i--) {
-                arr[i] = arr[i - 1];
-            }
-            arr[index] = element;
-            length++;
+//         if (index < size  || index>0) {
+//             for (int i = size ; i > index; i--) {
+//                 arr[i] = arr[i - 1];
+//             }
+//             arr[index] = element;
+//             length++;
 
-        } else {
-            System.out.println("not able to insert");
-        }
+//         } else {
+//             System.out.println("not able to insert");
+//         }
 
-        System.out.println("New array is: ");
-        for (int i = 0; i < length; i++) {
-            System.out.print(arr[i] + "   ");
-        }
+//         System.out.println("New array is: ");
+//         for (int i = 0; i < length; i++) {
+//             System.out.print(arr[i] + "   ");
+//         }
 
     }
 

@@ -54,3 +54,66 @@
 //     }
     
 // }
+
+
+class Node{
+     int data;
+    Node right;
+    Node left;
+    Node(int data){
+        this.data = data;
+        this.right = null; this.left = null;
+    }
+
+}
+
+public class HeightOfBinarytree{
+
+    static int height(Node root){
+        if(root == null){
+            return 0;
+           }
+
+        int leftHeight = height(root.left);
+        int rightHeight= height(root.right);
+
+        int result= Math.max(leftHeight, rightHeight)+1;
+        return result;
+
+    }
+
+    static int size(Node root){
+        if(root == null){
+            return 0;
+        }
+
+        int leftsize= size(root.left);
+        int rightsize= size(root.right);
+       int result  = 1 + leftsize+ rightsize;
+       return result;
+    }
+
+
+
+
+
+    public static void main(String[] args){
+
+        Node root = new Node(10);
+                
+        
+        root.right = new Node(20);
+                root.left = new Node(30);
+                root.right.left = new Node(40);
+                root.left.left = new Node( 50);
+
+
+                System.out.println("height of tree: ");
+               System.out.println(height(root));
+               
+               System.out.println("Size of tree: ");
+               System.out.println(size(root));
+               
+
+    }
+}

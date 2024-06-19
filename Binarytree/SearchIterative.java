@@ -15,12 +15,12 @@ class Node{
 }
 
 public class SearchIterative {
-     static Node root;
-    SearchIterative(){
-        this.root = null;
-    }
+      Node root;
+    // SearchIterative(){
+    //     this.root = null;
+    // }
 
-   static  Node insertRec(Node root, int x){
+    Node insertRec(Node root, int x){
         Node tem = new Node(x);
         if(root == null){
             return tem;
@@ -36,15 +36,23 @@ public class SearchIterative {
         return root;
     }
 
-    static void insert(int key) {
+     void insert(int key) {
         root = insertRec(root, key);
     }
 
     public static void main(String[] args){
+        SearchIterative tree = new SearchIterative();
        
-        insert(10);
-        insert(20);
+        tree.insert(50);
+        tree.insert(30);
+        tree.insert(20);
+        tree.insert(40);
+        tree.insert(70);
+        tree.insert(60);
+        tree.insert(80);
 
+
+        
     }
 
     

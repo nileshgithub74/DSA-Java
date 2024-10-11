@@ -12,6 +12,12 @@ class Node {
 public class implementation {
   static Node head = null;
 
+
+
+
+  /// insert at beginning of the linkedList 
+  
+
   static void insertAtBeginning(int data) {
 
     Node temp = new Node(data);

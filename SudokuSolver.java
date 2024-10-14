@@ -4,12 +4,7 @@ public class SudokuSolver {
     static final int EMPTY = 0;           
     static final int N = 9;     
 
-   
-    static boolean isSafe(int[][] grid, int row, int col, int num) {
-        return (!rowFind(grid, row, num) && !colFind(grid, col, num) && !subMatrixFind(grid, row - row % 3, col - col % 3, num) && grid[row][col] == EMPTY);
-    }
 
-    // To find if there is an empty cell
     static boolean findEmptyCell(int[][] grid, int[] cell) {
         for (int row = 0; row < N; row++) {
             for (int col = 0; col < N; col++) {
@@ -27,34 +22,35 @@ public class SudokuSolver {
         int[] cell = new int[2];
         
         if (!findEmptyCell(grid, cell))
-            return true;        // If there is no empty cell, we have found the solution.
+            return true;       
 
         int row = cell[0];
         int col = cell[1];
 
         for (int num = 1; num <= 9; num++) {
-            if (isSafe(grid, row, col, num)) { // Check if placement is safe
+            if (isSafe(grid, row, col, num)) {
                 grid[row][col] = num;
 
                 if (solve(grid))
-                    return true; // Return if solve is successful
+                    return true;       // Return if solve is successful
 
-                grid[row][col] = EMPTY; // Backtrack and try the next number
+                grid[row][col] = EMPTY;   // Backtrack and try the next number
             }
         }
         return false;
     }
 
-    static boolean colFind(int[][] grid, int col, int num) {
-        for (int row = 0; row < N; row++) {
-            if (grid[row][col] == num)
+    static boolean colFind(int[][] grid, int col, int num){
+        for(int row =0; row<N; row++){
+            if(grid[row][col] ==num){
                 return true;
+            }
         }
         return false;
     }
-
-    static boolean rowFind(int[][] grid, int row, int num) {
-        for (int col = 0; col < N; col++) {
+    
+   static boolean rowFind(int[][] grid, int row, int num) {
+     for (int col = 0; col < N; col++) {
             if (grid[row][col] == num)
                 return true;
         }
@@ -70,6 +66,11 @@ public class SudokuSolver {
         }
         return false;
     }
+    
+
+    static boolean isSafe(int[][] grid, int row, int col, int num) {
+        return (!rowFind(grid, row, num) && !colFind(grid, col, num) && !subMatrixFind(grid, row - row % 3, col - col % 3, num) && grid[row][col] == EMPTY);
+    }
 
     static void printSudoku(int[][] grid) {
         for (int row = 0; row < N; row++) {
@@ -82,9 +83,9 @@ public class SudokuSolver {
 
     public static void main(String[] args) {
         int[][] grid = {
-            { 0, 0, 0, 2, 6, 0, 7, 0, 1 },
-            { 6, 8, 0, 0, 7, 0, 0, 9, 0 },
-            { 1, 9, 0, 0, 0, 4, 5, 0, 0 },
+            { 4, 0, 0, 2, 6, 0, 7, 0, 1 },
+            { 0, 8, 0, 0, 7, 0, 0, 9, 0 },
+            { 0, 9, 0, 0, 0, 4, 5, 0, 0 },
             { 8, 2, 0, 1, 0, 0, 0, 4, 0 },
             { 0, 0, 4, 6, 0, 2, 0, 0, 0 },
             { 0, 5, 0, 0, 0, 3, 0, 2, 8 },
@@ -98,3 +99,7 @@ public class SudokuSolver {
             System.out.println("No arrangement possible");
     }
 }
+
+
+  
+

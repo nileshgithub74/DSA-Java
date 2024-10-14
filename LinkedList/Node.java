@@ -1,14 +1,14 @@
-public class Node{
-  int data;
-  Node next;
+// public class Node{
+//   int data;
+//   Node next;
 
-  Node(int data){
-    this.data = data;
-    this.next= null;
-  }
+//   Node(int data){
+//     this.data = data;
+//     this.next= null;
+//   }
 
   
-}
+// }
 
 
 
@@ -18,8 +18,8 @@ public class Node{
 
 
 
-public class implementation {
+// public class implementation {
 
  
   
-}
+// }
